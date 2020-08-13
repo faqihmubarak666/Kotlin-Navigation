@@ -38,19 +38,7 @@
                 android:textSize="20sp"
                 android:layout_marginStart="10dp"/>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <Spinner
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:prompt="@string/bank_prompt"
-                    android:entries="@array/bank_arrays">
-                </Spinner>
-            </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.textfield.TextInputLayout
                 app:boxCornerRadiusTopStart="10dp"
