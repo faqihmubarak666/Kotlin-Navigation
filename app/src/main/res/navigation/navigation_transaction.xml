@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_transaction"
+    app:startDestination="@id/inputRecipientFragment">
+
+    <fragment
+        android:id="@+id/amountInput"
+        android:name="com.example.day9_navigation.screens.InputAmountFragment"
+        android:label="fragment_amount_input"
+        tools:layout="@layout/fragment_amount_input" >
+        <action
+            android:id="@+id/action_amountInput_to_confirmation"
+            app:destination="@id/confirmation" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmation"
+        android:name="com.example.day9_navigation.screens.Confirmation"
+        android:label="fragment_confirmation"
+        tools:layout="@layout/fragment_confirmation" />
+    <fragment
+        android:id="@+id/inputRecipientFragment"
+        android:name="com.example.day9_navigation.screens.InputRecipientFragment"
+        android:label="fragment_input_recipient"
+        tools:layout="@layout/fragment_input_recipient" >
+        <action
+            android:id="@+id/action_inputRecipientFragment_to_amountInput"
+            app:destination="@id/amountInput" />
+    </fragment>
+</navigation>
