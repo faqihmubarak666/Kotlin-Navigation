@@ -30,20 +30,40 @@
                 />
 
             <TextView
-                android:id="@+id/nameConfirmation"
+                android:id="@+id/name_confirmation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
                 android:text="@string/name_confirmation"
                 android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/account_number_confirmation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/account_number"
+                android:textAlignment="center"
                 android:textSize="20sp"/>
 
             <TextView
-                android:id="@+id/amountConfirmation"
+                android:id="@+id/amount_confirmation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"
                 android:text="@string/amount_confirmation"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/bank_confirmation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:text="@string/bank_confirmation"
                 android:textAlignment="center"
                 android:textSize="20sp"/>
 

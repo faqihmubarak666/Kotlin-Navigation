@@ -5,19 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.day9_navigation.R
-import kotlinx.android.synthetic.main.fragment_amount_input.*
-import kotlinx.android.synthetic.main.fragment_confirmation.*
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.example.day9_navigation.view_model.TransferViewModel
 import kotlinx.android.synthetic.main.fragment_input_recipient.*
 
 class InputRecipientFragment : Fragment(), View.OnClickListener {
 
     lateinit var navController : NavController
-
+    val transferViewModel by activityViewModels<TransferViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,10 +39,13 @@ class InputRecipientFragment : Fragment(), View.OnClickListener {
     }
 
     override fun onClick(v: View?) {
+
         when(v){
             recipient_button -> {
-                val bundle = bundleOf("nameRecipient" to recipient_name_text.text.toString())
-                navController.navigate(R.id.action_inputRecipientFragment_to_amountInput, bundle)
+                navController.navigate(R.id.action_inputRecipientFragment_to_amountInput)
+                transferViewModel.setRecipientName(recipient_name_text.text.toString())
+                transferViewModel.setAccountNumber(recipient_account_text.text.toString().toInt())
+                transferViewModel.setRecipientBank(recipient_bank.selectedItem.toString())
             }
         }
     }

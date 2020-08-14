@@ -27,5 +27,6 @@
     <string name="transfer">TRANSFER</string>
     <string name="history_transaction">HISTORY TRANSACTION</string>
     <string name="balance">BALANCE</string>
+    <string name="bank_confirmation">Bank Confirmation</string>
 
 </resources>
