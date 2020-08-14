@@ -39,13 +39,16 @@ class InputAmountFragment : Fragment(), View.OnClickListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewName.text = "TO :" + arguments?.getString("username")
+        viewName.text = "TO : " + arguments?.getString("nameRecipient")
     }
 
     override fun onClick(v: View?) {
         when(v){
             amount_button -> {
-                val bundle = bundleOf("amount" to transfer_amount_text.text.toString())
+                val bundle = bundleOf(
+                    "amount" to transfer_amount_text.text.toString(),
+                    "nameRecipient" to viewName.text.toString()
+                )
                 navController.navigate(R.id.action_amountInput_to_confirmation, bundle)
             }
         }

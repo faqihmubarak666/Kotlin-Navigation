@@ -24,7 +24,7 @@ class Confirmation : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        nameConfirmation.text = arguments?.getString("username")
+        nameConfirmation.text = arguments?.getString("nameRecipient")
         amountConfirmation.text = "Rp. " + arguments?.getString("amount")
 
     }

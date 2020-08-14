@@ -45,28 +45,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp">
+
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/transfer_amount_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Mount"/>
+                    android:hint="Mount" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                app:boxCornerRadiusTopStart="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp">
+                android:layout_margin="5dp"
+                app:boxCornerRadiusTopStart="10dp"
+                app:boxStrokeColor="#DAD3D3"
+                app:endIconTint="#D6CFCF"
+                app:hintTextColor="#D6CFCF">
 
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/amount_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="30dp"
-                android:src="@drawable/ic_baseline_send_24"
                 android:text="send"
+                app:iconGravity="textEnd"
+                app:icon="@drawable/ic_baseline_send_24"
                 app:backgroundTint="#1E38C5">
 
             </com.google.android.material.button.MaterialButton>

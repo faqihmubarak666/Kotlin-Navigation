@@ -43,7 +43,7 @@ class InputRecipientFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v){
             recipient_button -> {
-                val bundle = bundleOf("username" to recipient_name_text.text.toString())
+                val bundle = bundleOf("nameRecipient" to recipient_name_text.text.toString())
                 navController.navigate(R.id.action_inputRecipientFragment_to_amountInput, bundle)
             }
         }
